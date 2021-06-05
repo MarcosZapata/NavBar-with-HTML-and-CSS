@@ -1,0 +1,125 @@
+/*.. loading CSS asynchronously and gain speed loading the site ..
+ *.. (apply immediate CSS with inlineCSS on HTML) ..
+<link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'">
+ */
+
+/* Favorite css reset: Normalize.css */
+/* Plus 8 categories -->
+	1- Box-sizing
+	2- Removing margins and paddings
+	3- List
+	4- Forms and buttoms
+	5- Images and embeds
+	6- Tables
+	7- The hidden attribute
+	8- Noscript
+*/
+
+/*** Box-sizing ***/
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /*** Reset margins and paddings on most elements ***/
+  body,
+  h1,h2,h3,h4,h5,h6,
+  ul,ol,li,
+  p,
+  pre,
+  blockquote,
+  figure,
+  hr {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*** List: Removes discs from ul ***/
+  ul {
+    list-style: none;
+  };
+  
+  /*** Forms and buttoms ***/
+  input,
+  textarea,
+  select,
+  button {
+    color: inherit; 
+    font: inherit; 
+    letter-spacing: inherit; 
+  }
+  input,
+  textarea,
+  button {
+    border: 1px solid gray; 
+  }
+  button {
+    border-radius: 0; 
+    padding: 0.75em 1em;
+    background-color: transparent;
+  }
+  embed,
+  iframe,
+  img,
+  object,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+          /* ...mainly used for JavaScript interaction... */
+  button * {
+    pointer-events: none;
+  }
+  
+  
+  /*** Tables ***/
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  /*** the hidden attribute ***/
+  [hidden] {
+    display: none !important;
+  }
+  
+  /*** Noscript: ...to let user know there is a script they had disabled; ***/
+  noscript {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  
+  /*********** Custom css begins ************/
+  /* use em in your media queries
+  /* pick min-width or max-width (not both) to simplify queries
+  /* avoid using fixed dimentions for elements */
+  
+  :root {
+      --background: rgba(85,214,170,.85);
+  }
+
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #222;
+    font-weight: 400;
+
+  }
+
+  .content {
+      height: 200vh;
+      background-image: url(//picsum.photos/id/1019/1440/810);
+      background-color: #333;
+      background-blend-mode: multiply;
+      background-size: cover;
+      display: grid;
+      place-items: center;
+
+  }
+
+  /* NAV styles starts here */
+
